@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpy048uy1wb7i"]
+
+[ext_resource type="Texture2D" uid="uid://6v2dv5sb1c70" path="res://Assets/Ufo/Security.png" id="1_b4smp"]
+[ext_resource type="Script" path="res://Scenes/security.gd" id="1_f75s7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gk6vf"]
+radius = 39.0
+height = 160.0
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 128
+script = ExtResource("1_f75s7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b4smp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_gk6vf")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(3.5, 5.9)
+
+[node name="Timer" type="Timer" parent="."]

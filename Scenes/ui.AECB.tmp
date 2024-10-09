@@ -1,0 +1,93 @@
+[gd_scene load_steps=5 format=3 uid="uid://belx0qfvh4cii"]
+
+[ext_resource type="Script" path="res://Scenes/ui.gd" id="1_fb7xm"]
+[ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Assets/font/andina.ttf" id="2_yubox"]
+[ext_resource type="PackedScene" uid="uid://gbpn0c3dau37" path="res://education.tscn" id="3_08lyt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mokxj"]
+bg_color = Color(0, 0.709804, 0.486275, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_fb7xm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Points" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_yubox")
+theme_override_font_sizes/font_size = 30
+text = "SCORE: 0
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GameOverBox" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/GameOverBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="MarginContainer/CenterContainer/GameOverBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_mokxj")
+text = "RESTART"
+
+[node name="Name" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 46.0
+offset_right = 239.0
+offset_bottom = 77.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_yubox")
+theme_override_font_sizes/font_size = 30
+
+[node name="Difficulty" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 74.0
+offset_right = 191.0
+offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("2_yubox")
+theme_override_font_sizes/font_size = 30
+
+[node name="UIContainer" type="Node" parent="."]
+
+[node name="GameOverScreen" type="Node" parent="UIContainer"]
+
+[node name="Label" type="Label" parent="UIContainer/GameOverScreen"]
+offset_right = 1154.0
+offset_bottom = 142.0
+
+[node name="EducationScreen" parent="UIContainer" instance=ExtResource("3_08lyt")]
+visible = false
+offset_left = 0.0
+offset_top = 1.0
+offset_right = 1156.0
+offset_bottom = 652.0

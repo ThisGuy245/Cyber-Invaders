@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=3 uid="uid://gbpn0c3dau37"]
+
+[ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Assets/font/andina.ttf" id="1_gssis"]
+[ext_resource type="Script" path="res://education.gd" id="1_v41wy"]
+[ext_resource type="Texture2D" uid="uid://m4ub6oll4ikv" path="res://Assets/Invaders/Invader3-1.png" id="2_skd1q"]
+
+[node name="Control" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = -575.0
+offset_top = -300.0
+offset_right = 581.0
+offset_bottom = 351.0
+script = ExtResource("1_v41wy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -63.0
+offset_right = 1204.0
+offset_bottom = 679.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 3.0
+offset_right = 1138.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0.952941, 0.219608, 0, 1)
+theme_override_fonts/font = ExtResource("1_gssis")
+theme_override_font_sizes/font_size = 91
+text = "CYBER ATTACK!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyImage" type="TextureRect" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(45, 45)
+layout_direction = 2
+layout_mode = 0
+offset_left = 66.0
+offset_top = 119.0
+offset_right = 333.0
+offset_bottom = 340.0
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_skd1q")
+stretch_mode = 4
+flip_h = true
+
+[node name="VirusLabel" type="Label" parent="EnemyImage"]
+layout_mode = 0
+offset_left = 373.636
+offset_top = 28.1818
+offset_right = 843.636
+offset_bottom = 88.1818
+theme_override_fonts/font = ExtResource("1_gssis")
+theme_override_font_sizes/font_size = 60
+text = "TROJAN VIRUS"
+
+[node name="DescLabel" type="Label" parent="EnemyImage/VirusLabel"]
+layout_mode = 0
+offset_left = -56.0
+offset_top = 62.0
+offset_right = 516.0
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("1_gssis")
+theme_override_font_sizes/font_size = 22
+text = "A Trojan virus disguises itself as legitimate software to deceive users into installing it. 
+
+How do we combat this?"
+autowrap_mode = 3
+
+[node name="OptionA" type="Button" parent="."]
+process_mode = 2
+process_priority = 1
+layout_mode = 0
+offset_left = 73.0
+offset_top = 381.0
+offset_right = 367.0
+offset_bottom = 639.0
+theme_override_fonts/font = ExtResource("1_gssis")
+theme_override_font_sizes/font_size = 25
+text = "Leave it lol!"
+
+[node name="OptionB" type="Button" parent="."]
+process_mode = 2
+process_priority = 1
+layout_mode = 0
+offset_left = 434.0
+offset_top = 377.0
+offset_right = 724.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("1_gssis")
+theme_override_font_sizes/font_size = 25
+text = "FIght ig?"
+
+[node name="OptionC" type="Button" parent="."]
+process_mode = 2
+process_priority = 1
+layout_mode = 0
+offset_left = 788.0
+offset_top = 379.0
+offset_right = 1079.0
+offset_bottom = 637.0
+theme_override_fonts/font = ExtResource("1_gssis")
+theme_override_font_sizes/font_size = 25
+text = "Cba..."
+
+[node name="TextChangeTimer" type="Timer" parent="."]

@@ -1,0 +1,128 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccqrajktegpid"]
+
+[ext_resource type="Script" path="res://educate.gd" id="1_bqa2d"]
+[ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Assets/font/andina.ttf" id="2_u8pnc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -20.0
+offset_top = 9.0
+offset_right = 1136.0
+offset_bottom = 654.0
+script = ExtResource("1_bqa2d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -39.0
+offset_right = 1210.0
+offset_bottom = 703.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 15.0
+offset_right = 1049.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.952941, 0.219608, 0, 1)
+theme_override_fonts/font = ExtResource("2_u8pnc")
+theme_override_font_sizes/font_size = 91
+text = "SECURITY BREACH!"
+
+[node name="Label2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 198.0
+offset_right = 1074.0
+offset_bottom = 318.0
+theme_override_fonts/normal_font = ExtResource("2_u8pnc")
+fit_content = true
+
+[node name="OptionA" type="Button" parent="."]
+process_priority = 1
+light_mask = 1048575
+visibility_layer = 1048575
+layout_mode = 0
+offset_left = 92.0
+offset_top = 378.0
+offset_right = 379.0
+offset_bottom = 636.0
+theme_override_fonts/font = ExtResource("2_u8pnc")
+theme_override_font_sizes/font_size = 25
+clip_text = true
+
+[node name="TextureRect" type="TextureRect" parent="OptionA"]
+layout_mode = 0
+offset_right = 288.0
+offset_bottom = 254.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionA"]
+layout_mode = 0
+offset_right = 286.0
+offset_bottom = 252.0
+theme_override_fonts/normal_font = ExtResource("2_u8pnc")
+
+[node name="OptionB" type="Button" parent="."]
+process_priority = 1
+layout_mode = 0
+offset_left = 434.0
+offset_top = 377.0
+offset_right = 724.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("2_u8pnc")
+theme_override_font_sizes/font_size = 25
+toggle_mode = true
+action_mode = 0
+keep_pressed_outside = true
+clip_text = true
+
+[node name="TextureRect" type="TextureRect" parent="OptionB"]
+layout_mode = 0
+offset_right = 292.0
+offset_bottom = 256.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionB"]
+offset_right = 286.0
+offset_bottom = 252.0
+theme_override_fonts/normal_font = ExtResource("2_u8pnc")
+
+[node name="OptionC" type="Button" parent="."]
+process_priority = 1
+layout_mode = 0
+offset_left = 788.0
+offset_top = 379.0
+offset_right = 1079.0
+offset_bottom = 637.0
+theme_override_fonts/font = ExtResource("2_u8pnc")
+theme_override_font_sizes/font_size = 25
+clip_text = true
+
+[node name="TextureRect" type="TextureRect" parent="OptionC"]
+layout_mode = 0
+offset_right = 290.0
+offset_bottom = 259.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionC"]
+offset_right = 286.0
+offset_bottom = 252.0
+theme_override_fonts/normal_font = ExtResource("2_u8pnc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 983.0
+offset_top = 110.0
+offset_right = 1096.0
+offset_bottom = 369.0
+theme_override_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2

@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxhb6c2kqw5c7"]
+
+[ext_resource type="Script" path="res://start_screen.gd" id="1_co0ne"]
+[ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Assets/font/andina.ttf" id="2_3uypn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcw74"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_co0ne")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 308.0
+offset_top = 114.0
+offset_right = 813.0
+offset_bottom = 602.0
+theme_override_colors/font_color = Color(1, 0.329412, 0, 1)
+theme_override_fonts/font = ExtResource("2_3uypn")
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcw74")
+text = "PLAY"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 916.0
+offset_top = 592.0
+offset_right = 1146.0
+offset_bottom = 648.0
+theme_override_colors/font_color = Color(0.596078, 0.596078, 0.596078, 1)
+theme_override_fonts/font = ExtResource("2_3uypn")
+theme_override_font_sizes/font_size = 25
+text = "Alpha-Test v0.7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -25.0
+offset_top = 154.0
+offset_right = 275.0
+offset_bottom = 280.0
+rotation = -0.532325
+theme_override_colors/font_color = Color(1, 0.329412, 0, 1)
+theme_override_fonts/font = ExtResource("2_3uypn")
+theme_override_font_sizes/font_size = 55
+text = "DEBUG 
+MODE!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="load_game"]

@@ -1,0 +1,131 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7ut4dbrny4dp"]
+
+[ext_resource type="Script" path="res://input.gd" id="1_sv4en"]
+[ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Assets/font/andina.ttf" id="2_2m4r7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1156.0
+offset_bottom = 645.0
+script = ExtResource("1_sv4en")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 37.0
+offset_right = 933.0
+offset_bottom = 186.0
+theme_override_colors/font_color = Color(0.921569, 0.47451, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("2_2m4r7")
+theme_override_font_sizes/font_size = 91
+text = "GAME SETUP!"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 153.0
+offset_right = 823.0
+offset_bottom = 243.0
+theme_override_colors/font_outline_color = Color(0.878431, 0.878431, 0.878431, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_2m4r7")
+theme_override_font_sizes/font_size = 81
+placeholder_text = "Name"
+alignment = 1
+max_length = 10
+clear_button_enabled = true
+secret_character = "*"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 504.0
+offset_right = 724.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("2_2m4r7")
+theme_override_font_sizes/font_size = 66
+text = "PLAY"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 244.0
+offset_right = 896.0
+offset_bottom = 295.0
+theme_override_fonts/font = ExtResource("2_2m4r7")
+theme_override_font_sizes/font_size = 31
+text = "(10 Chars Max.)"
+horizontal_alignment = 1
+
+[node name="Easy B" type="Button" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 305.0
+offset_right = 452.0
+offset_bottom = 430.0
+
+[node name="TextureRect" type="TextureRect" parent="Easy B"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 41.0
+offset_bottom = 41.0
+
+[node name="Inter B" type="Button" parent="."]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 305.0
+offset_right = 635.0
+offset_bottom = 430.0
+
+[node name="TextureRect" type="TextureRect" parent="Inter B"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Prof B" type="Button" parent="."]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 305.0
+offset_right = 821.0
+offset_bottom = 430.0
+
+[node name="TextureRect" type="TextureRect" parent="Prof B"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 435.0
+offset_right = 460.0
+offset_bottom = 469.0
+theme_override_fonts/font = ExtResource("2_2m4r7")
+theme_override_font_sizes/font_size = 31
+text = "Student"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 434.0
+offset_right = 642.0
+offset_bottom = 468.0
+theme_override_fonts/font = ExtResource("2_2m4r7")
+theme_override_font_sizes/font_size = 31
+text = "Junior"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 433.0
+offset_right = 828.0
+offset_bottom = 467.0
+theme_override_fonts/font = ExtResource("2_2m4r7")
+theme_override_font_sizes/font_size = 31
+text = "Senior"
+horizontal_alignment = 1

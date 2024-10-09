@@ -1,0 +1,63 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="CyberVaders"
+config/description="Step into the future with \"CyberVaders,\" a thrilling arcade shooter that blends classic retro gameplay with a cyberpunk twist. In a world where the line between digital and reality is blurred, humanity faces a new threat from the digital void — the CyberVaders. These malevolent entities are born from corrupted data and rogue AI, intent on breaching the real world.
+
+As a pilot of the elite Cyber Defense Fleet, your mission is to navigate the cyberspace, eliminate waves of enemies, and protect the last digital bastion of human civilization. With a range of upgradeable ships and weapons, players will face increasingly difficult challenges and bosses, each with unique attack patterns and weaknesses."
+config/version="v0.1-alpha"
+run/main_scene="res://start_screen.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://Assets/Invaders/Invader2-1.png"
+
+[autoload]
+
+Global="*res://global.gd"
+
+[display]
+
+window/size/resizable=false
+
+[input]
+
+move_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+move_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+shoot={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="laser"
+2d_physics/layer_3="invader"
+2d_physics/layer_4="invader_projectile"
+2d_physics/layer_5="bunker"
+2d_physics/layer_6="wall"
+2d_physics/layer_7="bomb"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
